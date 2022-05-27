@@ -1,12 +1,13 @@
 :root{
-    --negro         : #0000;
     --rosa : #FF74E9;
     --amarillo : #FFF84F;
     --azul : #2F0DFF;
     --morado : #9745FF;
 
-    --tipo-h1   : 'Neue Montreal';
-    --tipo-p  : Verdana;
+    --font-h1   : ;
+    --font-p  : 'neue_montrealmedium';
+    --color-p : black;
+    --color-nav: #FF74E9;
   }
     
   @media (prefers-color-scheme: dark) {
@@ -108,6 +109,7 @@
   body {
     min-height  : 100vh;
     font-size   : 100%;
-    font-family: 'neue_montrealmedium';
+    font-family: var(--font-p);
+    color: var(--color-p);
     
   }

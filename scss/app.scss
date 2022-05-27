@@ -1,6 +1,116 @@
 @import '_mixins', '_reset' , '_keyframes';
 
-.etiqueta{
-    border-radius: 1rem ;
-    border-radius: 1rem 1rem  0rem  0rem ;
+// .etiqueta{
+//     border-radius: 1rem ;
+//     border-radius: 1rem 1rem  0rem  0rem ;
+// }
+
+.header{
+    &__wrapper{
+        width: 90%;
+        background-color: aqua;
+        margin: auto;
+        @include flexible( row , nowrap , space-between , flex-start );
+
+
+    }
+
+    &__datos{
+        width: 40%;
+        background-color: coral;
+
+        @include flexible( row , nowrap , flex-start , flex-start );
+
+    }
+    &__h1{}
+    &__pais{
+        @include flexible( column , nowrap , flex-start , flex-start );
+    
+        margin: 0 0 0 10%;
+        background-color: deepskyblue;
+
+    }
+    &__p{
+
+    }
+
+    &__nav{}
+    &__ul{
+
+        @include flexible( row , nowrap , flex-start , flex-start );
+    }
+    &__li{}
+    &__a{
+        margin: 0 2rem;
+    }
+}
+
+.blanca{
+    &__move{
+        width: 200%;
+        background-color: deeppink;
+        @include flexible( row , nowrap , flex-start , center );
+    }
+    &__hgroup{
+        width: 50%;
+        background-color: yellow;
+        padding: 3rem 0;
+        
+        
+    }
+    &__h2{
+        font-size: 9em;
+        
+    }
+    &__span{
+        width: 10px;
+        height: 10px;
+        background-color: var(--rosa);
+        border-radius: 50%;
+    }
+}
+
+.amarillo{
+
+    &__wrapper{
+
+    }
+
+    &__img{}
+    &__face{
+
+    }
+
+    &__ul{}
+    &__li{}
+    &__dato{}
+
+    &__container{}
+    &__bloque{
+        &.works{
+            &__section{}
+            &__a{}
+            &__img{}
+            &__h2{}
+            &__p{}
+        }
+
+        &.about{
+            &__img{}
+            &__p{}
+        }
+    }
+
+}
+
+.footer{
+    &__wrapper{}
+    &__ready{}
+    &__work{}
+    &__linea{}
+    &__idea{}
+    &__email{}
+    &__rrss{}
+    &__rs{}
+    &__a{}
 }

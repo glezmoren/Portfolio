@@ -1,11 +1,12 @@
 :root {
-  --negro: #0000;
   --rosa: #FF74E9;
   --amarillo: #FFF84F;
   --azul: #2F0DFF;
   --morado: #9745FF;
-  --tipo-h1: "Neue Montreal";
-  --tipo-p: Verdana;
+  --font-h1: ;
+  --font-p: "neue_montrealmedium";
+  --color-p: black;
+  --color-nav: #FF74E9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -104,10 +105,109 @@ svg {
 body {
   min-height: 100vh;
   font-size: 100%;
-  font-family: "neue_montrealmedium";
+  font-family: var(--font-p);
+  color: var(--color-p);
 }
 
-.etiqueta {
-  border-radius: 1rem;
-  border-radius: 1rem 1rem 0rem 0rem;
+.header__wrapper {
+  width: 90%;
+  background-color: aqua;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.header__datos {
+  width: 40%;
+  background-color: coral;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.header__pais {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 0 0 10%;
+  background-color: deepskyblue;
+}
+.header__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.header__a {
+  margin: 0 2rem;
+}
+
+.blanca__move {
+  width: 200%;
+  background-color: deeppink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.blanca__hgroup {
+  width: 50%;
+  background-color: yellow;
+  padding: 3rem 0;
+}
+.blanca__h2 {
+  font-size: 9em;
+}
+.blanca__span {
+  width: 10px;
+  height: 10px;
+  background-color: var(--rosa);
+  border-radius: 50%;
 }
