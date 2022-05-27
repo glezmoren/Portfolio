@@ -6,6 +6,7 @@
 // }
 
 .header{
+    background-color: var(--amarillo);
     &__wrapper{
         width: 90%;
         background-color: aqua;
@@ -34,32 +35,38 @@
 
     }
 
-    &__nav{}
+    &__nav{
+    
+    }
     &__ul{
 
         @include flexible( row , nowrap , flex-start , flex-start );
     }
     &__li{}
     &__a{
-        margin: 0 2rem;
+        margin: 0 0 0 2rem;
     }
 }
 
 .blanca{
+    background-color: var(--amarillo);
     &__move{
         width: 200%;
-        background-color: deeppink;
+        background-color: red;
         @include flexible( row , nowrap , flex-start , center );
+        padding: 6rem 0;
     }
     &__hgroup{
-        width: 50%;
-        background-color: yellow;
-        padding: 3rem 0;
+        width: 90%;
+        background-color: deeppink;
+        padding: 2rem 0;
+
         
         
     }
     &__h2{
         font-size: 9em;
+        background-color: cornflowerblue;
         
     }
     &__span{
@@ -71,40 +78,109 @@
 }
 
 .amarillo{
+    width: 100%;
+    background-color: var(--amarillo);
 
     &__wrapper{
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+        position: relative;
 
     }
 
-    &__img{}
+    &__img{
+        width: 1000px;
+        height: 1000px;
+        background-color: lightpink;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+
+        &.static{
+            position: static;
+        }
+
+        &.activo{
+            opacity: 1;
+        }
+    }
     &__face{
-
+        width: 10rem;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 
-    &__ul{}
+    &__ul{
+        background-color: deeppink;
+        @include flexible( row , nowrap , flex-start , center );
+    }
     &__li{}
-    &__dato{}
+    &__dato{
+        padding: 0.8rem 3rem 0.5rem 1rem;
+        border-radius: 1rem 1rem 0 0;
+        background-color: azure;
 
-    &__container{}
-    &__bloque{
         &.works{
-            &__section{}
-            &__a{}
-            &__img{}
-            &__h2{}
-            &__p{}
+            background-color: var(--morado);
         }
 
         &.about{
-            &__img{}
-            &__p{}
+            background-color: var(--rosa);
         }
+    }
+
+    &__container{}
+    &__bloque{
+        padding: 2rem;
+        &.works{
+            background-color: var(--morado);
+            
+           
+           
+        }
+
+        &.about{
+            background-color: var(--rosa);
+            @include flexible( row , nowrap , space-between , center );
+            
+        }
+        .about__p{
+            width: 50%;
+            margin: 0 4rem 0 0;
+            line-height: 1.4rem;
+
+        }
+        .about__img{
+            background-color: aqua;
+            width: 50%;
+            height: 30rem;
+        }
+
+        .works__section{
+            @include flexible( row , wrap , space-between , center );
+        }
+        .works__a{}
+        .works__img{
+            width: 20rem;
+            height: 20rem;
+            background-color: black;
+        }
+        .works__h2{}
+        .works__p{}
     }
 
 }
 
 .footer{
-    &__wrapper{}
+    &__wrapper{
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+        background-color: var(--azul);
+
+    }
     &__ready{}
     &__work{}
     &__linea{}
