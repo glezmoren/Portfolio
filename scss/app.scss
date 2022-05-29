@@ -93,9 +93,9 @@
     }
 
     &__img{
-        width: 1000px;
-        height: 1000px;
-        background-color: lightpink;
+        // width: 1000px;
+        // height: 1000px;
+        // background-color: lightpink;
         position: absolute;
         top: 0;
         opacity: 0;
@@ -114,6 +114,7 @@
         right: 0;
         top: 0;
         color: black;
+        z-index: 2;
     }
 
     &__ul{
@@ -171,9 +172,9 @@
         }
         .works__a{}
         .works__img{
-            width: 20rem;
-            height: 20rem;
-            background-color: black;
+            // width: 20rem;
+            // height: 20rem;
+            // background-color: black;
         }
         .works__h2{
             margin: 1rem 0 0 0;

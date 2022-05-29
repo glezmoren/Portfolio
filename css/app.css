@@ -234,9 +234,6 @@ body {
   position: relative;
 }
 .amarillo__img {
-  width: 1000px;
-  height: 1000px;
-  background-color: lightpink;
   position: absolute;
   top: 0;
   opacity: 0;
@@ -253,6 +250,7 @@ body {
   right: 0;
   top: 0;
   color: black;
+  z-index: 2;
 }
 .amarillo__ul {
   background-color: deeppink;
@@ -316,11 +314,6 @@ body {
   background-color: aqua;
   width: 50%;
   height: 30rem;
-}
-.amarillo__bloque .works__img {
-  width: 20rem;
-  height: 20rem;
-  background-color: black;
 }
 .amarillo__bloque .works__h2 {
   margin: 1rem 0 0 0;
