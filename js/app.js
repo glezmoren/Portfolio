@@ -12,3 +12,9 @@
 //     }
 // }
 
+
+$('.amarillo__dato about').click(function(){
+    $('.amarillo_bloque works').addclass('oculto')
+    $('.amarillo_bloque about').addclass('activo')
+})
+

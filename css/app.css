@@ -4,7 +4,7 @@
   --azul: #2F0DFF;
   --morado: #9745FF;
   --font-h1: ;
-  --font-p: "neue_montrealmedium";
+  --font-p: "neue_montrealregular";
   --color-p: white;
   --color-nav: #FF74E9;
 }
@@ -169,9 +169,25 @@ body {
 }
 
 .header {
-  background-color: var(--amarillo);
-  padding: 2rem 0;
+  font-family: "neue_montrealmedium";
+  padding: 4rem 0;
   color: var(--rosa);
+  font-size: 2em;
+}
+@media screen and (max-width: 1743px) {
+  .header {
+    right: -3rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .header {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 1241px) {
+  .header {
+    padding: 2rem 0;
+  }
 }
 .header__wrapper {
   width: 90%;
@@ -243,7 +259,7 @@ body {
 
 .blanca {
   position: relative;
-  margin: 4rem 0;
+  margin: 2rem 0 4rem;
   overflow: hidden;
 }
 .blanca::after {
@@ -287,6 +303,29 @@ body {
           align-items: center;
   -webkit-animation: move 6s linear infinite both;
           animation: move 6s linear infinite both;
+}
+@media screen and (max-width: 2479px) {
+  .blanca__move {
+    width: 212%;
+  }
+}
+@media screen and (max-width: 1700px) {
+  .blanca__move {
+    -webkit-animation: move 10s linear infinite both;
+            animation: move 10s linear infinite both;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .blanca__move {
+    width: 400%;
+  }
+}
+@media screen and (max-width: 1241px) {
+  .blanca__move {
+    width: 500%;
+    -webkit-animation: move 14s linear infinite both;
+            animation: move 14s linear infinite both;
+  }
 }
 .blanca__hgroup {
   width: 25%;
@@ -414,12 +453,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -3rem;
+  margin-top: -2rem;
+  position: absolute;
+  z-index: 4;
 }
 .amarillo__dato {
   padding: 0.8rem 3rem 0.5rem 1rem;
   border-radius: 1rem 1rem 0 0;
   background-color: azure;
+  cursor: pointer;
 }
 .amarillo__dato.works {
   background-color: var(--morado);
@@ -432,6 +474,7 @@ body {
 }
 .amarillo__bloque {
   padding: 2rem;
+  border-radius: 0 2rem 0 0;
 }
 .amarillo__bloque.works {
   background-color: var(--morado);
@@ -451,6 +494,7 @@ body {
 }
 .amarillo__bloque.about {
   background-color: var(--rosa);
+  padding: 4rem 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -458,13 +502,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  display: none;
 }
 .amarillo__bloque.about.activo {
   display: -webkit-box;
@@ -472,14 +515,22 @@ body {
   display: flex;
 }
 .amarillo__bloque .about__p {
-  width: 50%;
-  line-height: 1.4rem;
-  padding: 2rem;
+  width: 100%;
+  line-height: 2rem;
+  padding: 0.6rem;
+  margin: 0 0 0 4rem;
+  font-size: 1.4em;
+}
+.amarillo__bloque .about__a {
+  text-decoration: underline;
 }
 .amarillo__bloque .about__img {
   background-color: aqua;
-  width: 50%;
-  height: 30rem;
+  width: 40%;
+  border-radius: 4rem;
+}
+.amarillo__bloque .works__section {
+  letter-spacing: 1px;
 }
 .amarillo__bloque .works__h2 {
   margin: 1rem 0 0 0;

@@ -6,11 +6,31 @@
 // }
 body{
     background-color: var(--amarillo);
+    
 }
 .header{
-    background-color: var(--amarillo);
-    padding: 2rem 0;
+    font-family:'neue_montrealmedium';
+    padding: 4rem 0;
     color: var(--rosa);
+    font-size: 2em;
+    @media screen and (max-width: 1743px) {
+
+        right: -3rem;
+         
+    }
+    @media screen and (max-width: 1600px) {
+
+       font-size: 1.2em;
+         
+    }
+    @media screen and (max-width: 1241px) {
+
+       padding: 2rem 0;
+         
+    }
+    
+    
+    
     &__wrapper{
         width: 90%;
         // background-color: aqua;
@@ -59,7 +79,7 @@ body{
 .blanca{
     
     position: relative;
-    margin: 4rem 0;
+    margin: 2rem 0 4rem;
     overflow: hidden;
     &::after{
         content: '';
@@ -92,6 +112,27 @@ body{
         // padding: 6rem 0;
 
         animation: move 6s linear infinite both;
+        @media screen and (max-width: 2479px) {
+
+            width: 212%;
+             
+        }
+        @media screen and (max-width: 1700px) {
+
+            animation: move 10s linear infinite both;
+             
+        }
+        @media screen and (max-width: 1400px) {
+
+            width: 400%;
+             
+        }
+        @media screen and (max-width: 1241px) {
+
+            width: 500%;
+            animation: move 14s linear infinite both;
+             
+        }
     }
     &__hgroup{
         width: 25%;
@@ -203,13 +244,16 @@ body{
     &__ul{
         background-color: deeppink;
         @include flexible( row , nowrap , flex-start , center );
-        margin-top: -3rem;
+        margin-top: -2rem;
+        position:absolute;
+        z-index: 4;
     }
     &__li{}
     &__dato{
         padding: 0.8rem 3rem 0.5rem 1rem;
         border-radius: 1rem 1rem 0 0;
         background-color: azure;
+        cursor: pointer;
 
         &.works{
             background-color: var(--morado);
@@ -225,6 +269,7 @@ body{
     }
     &__bloque{
         padding: 2rem;
+        border-radius: 0 2rem 0 0;
         &.works{
             background-color: var(--morado);
             display: grid;
@@ -248,9 +293,10 @@ body{
 
         &.about{
             background-color: var(--rosa);
-            @include flexible( row , nowrap , space-between , flex-start );
+            padding: 4rem 10rem;
+            @include flexible( row , nowrap , center , flex-start );
 
-            display: none;
+            // display: none;
             &.activo{
                 display: flex;
             }
@@ -258,37 +304,51 @@ body{
 
             
         }
-        .about__p{
-            width: 50%;
-            line-height: 1.4rem;
-            padding: 2rem;
-
-        }
-        .about__img{
-            background-color: aqua;
-            width: 50%;
-            height: 30rem;
-        }
-
-        .works__section{
-            // opacity: 0;
-            // &.activo{
-            //     opacity: 1;
-            // }
+        .about{
             
+            &__p{
+                width: 100%;
+                line-height: 2rem;
+                padding: 0.6rem;
+                margin: 0 0 0 4rem;
+                font-size: 1.4em;
+                
+            }
+            &__a{
+                text-decoration: underline;
+            }
+            &__img{
+                background-color: aqua;
+                width: 40%;
+                border-radius: 4rem;
+            }
         }
-        .works__a{}
-        .works__img{
-            // width: 20rem;
-            // height: 20rem;
-            // background-color: black;
-           
+
+        .works{
+            &__section{
+                letter-spacing: 1px;
+                // opacity: 0;
+                // &.activo{
+                //     opacity: 1;
+                // }
+                
+            }
+            &__a{}
+            &__img{
+                // width: 20rem;
+                // height: 20rem;
+                // background-color: black;
+               
+            }
+            &__h2{
+                margin: 1rem 0 0 0;
+            }
+            &__p{}
         }
-        .works__h2{
-            margin: 1rem 0 0 0;
+
         }
-        .works__p{}
-    }
+
+        
 
 }
 
