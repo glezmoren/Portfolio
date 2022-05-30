@@ -45,18 +45,25 @@ body{
         @include flexible( row , nowrap , flex-start , flex-start );
 
     }
-    &__h1{}
+    &__h1{
+        display: block;
+        @media screen and (max-width: 627px) {
+
+            display: none;
+              
+         }
+    }
     &__pais{
         @include flexible( column , nowrap , flex-start , flex-start );
-    
+       
         margin: 0 0 0 10%;
         // background-color: deepskyblue;
 
-        // @media screen and (max-width: 879px) {
+        @media screen and (max-width: 627px) {
 
-        //     width: 50%;
-             
-        // }
+            display: none;
+              
+         }
 
     }
     &__p{
@@ -144,6 +151,16 @@ body{
            width: 500%;
             
         }
+        @media screen and (max-width: 693px) {
+
+           width: 600%;
+            
+        }
+        @media screen and (max-width: 494px) {
+
+           width: 700%;
+            
+        }
     }
     &__hgroup{
         width: 25%;
@@ -161,6 +178,16 @@ body{
         @media screen and (max-width: 827px) {
 
             font-size: 6em;
+            
+        }
+        @media screen and (max-width: 693px) {
+
+            font-size: 5em;
+            
+        }
+        @media screen and (max-width: 494px) {
+
+            font-size: 4em;
             
         }
         
@@ -201,8 +228,6 @@ body{
         opacity: 0;
         border-radius: 2rem 2rem 0 0;
        
-        
-
         &.static{
             position: static;
 
@@ -331,6 +356,14 @@ body{
                 display: flex;
             }
 
+            @media screen and (max-width: 1100px) {
+
+                flex-direction: column;
+                align-items: center;
+                padding: 4rem;
+                  
+             }
+
 
             
         }
@@ -342,14 +375,21 @@ body{
                 padding: 0.6rem;
                 margin: 0 0 0 4rem;
                 font-size: 1.4em;
+
+                @media screen and (max-width: 1100px) {
+
+                    margin: 0 0 0 0;
+                      
+                 }
                 
             }
             &__a{
-                text-decoration: underline;
+                
             }
             &__img{
                 background-color: aqua;
-                width: 40%;
+                width: 50%;
+                min-width: 40%;
                 border-radius: 4rem;
             }
         }
@@ -368,6 +408,10 @@ body{
                 // width: 20rem;
                 // height: 20rem;
                 // background-color: black;
+                filter: grayscale(100%);
+
+               
+                
                
             }
             &__h2{
