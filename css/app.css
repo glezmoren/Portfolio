@@ -191,7 +191,7 @@ body {
           align-items: flex-start;
 }
 .header__datos {
-  width: 40%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,6 +382,23 @@ body {
   color: black;
   z-index: 2;
 }
+@media screen and (max-width: 1743px) {
+  .amarillo__face {
+    right: -3rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .amarillo__face {
+    right: -1rem;
+    width: 12rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .amarillo__face {
+    right: -1rem;
+    width: 9rem;
+  }
+}
 .amarillo__ul {
   background-color: deeppink;
   display: -webkit-box;
@@ -426,6 +443,11 @@ body {
 }
 .amarillo__bloque.works.oculto {
   display: none;
+}
+@media screen and (max-width: 1352px) {
+  .amarillo__bloque.works {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
 }
 .amarillo__bloque.about {
   background-color: var(--rosa);
@@ -477,6 +499,16 @@ body {
   width: 90%;
   margin: auto;
 }
+@media screen and (max-width: 1286px) {
+  .footer__work {
+    font-size: 3.6em;
+  }
+}
+@media screen and (max-width: 420px) {
+  .footer__work {
+    font-size: 3em;
+  }
+}
 .footer__linea {
   height: 2px;
   width: 90%;
@@ -490,14 +522,44 @@ body {
   width: 90%;
   margin: auto;
 }
+@media screen and (max-width: 1286px) {
+  .footer__idea {
+    font-size: 3.6em;
+  }
+}
+@media screen and (max-width: 420px) {
+  .footer__idea {
+    font-size: 3em;
+  }
+}
 .footer__email {
   margin: 3rem;
-  width: 20%;
   font-size: 10em;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  background-color: aquamarine;
+}
+@media screen and (max-width: 1286px) {
+  .footer__email {
+    font-size: 8em;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .footer__email {
+    font-size: 6em;
+  }
+}
+@media screen and (max-width: 778px) {
+  .footer__email {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 540px) {
+  .footer__email {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 420px) {
+  .footer__email {
+    font-size: 2em;
+  }
 }
 .footer__rrss {
   display: -webkit-box;
@@ -505,8 +567,8 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -516,5 +578,5 @@ body {
   margin: 0 3rem 0 0;
 }
 .footer__rs {
-  margin: 0 1rem;
+  margin: 0.6rem 0 0 2rem;
 }
