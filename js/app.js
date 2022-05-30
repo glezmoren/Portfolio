@@ -1,6 +1,14 @@
 
-/* Cuando hago click en '.header__menu.'
-'header__desplegado' se le añade la clase 'activo' */
-$('.header__menu').click(function(){
-    $('.header__desplegado').toggleClass('activo')
-})
+
+
+// $(window).scroll(function(){
+//     let pixel    = $(window).scrollTop()
+//     let altoV    = $(window).height()
+//     let distCaja = $('.works__section').offset().top
+
+//     if ( pixel >= distCaja - (altoV / 2) ){
+
+//         $('.works__section').addClass('activo')
+//     }
+// }
+
