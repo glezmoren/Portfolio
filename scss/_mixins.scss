@@ -4,3 +4,7 @@
     justify-content: $justi;
     align-items: $verti;
 }
+@mixin grid( $min , $gap ){
+    grid-template-columns: repeat(auto-fit, minmax( $min,  1fr ));
+    gap: $gap;
+}

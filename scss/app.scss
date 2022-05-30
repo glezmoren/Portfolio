@@ -4,23 +4,23 @@
 //     border-radius: 1rem ;
 //     border-radius: 1rem 1rem  0rem  0rem ;
 // }
-
+body{
+    background-color: var(--amarillo);
+}
 .header{
     background-color: var(--amarillo);
     padding: 2rem 0;
     color: var(--rosa);
     &__wrapper{
         width: 90%;
-        background-color: aqua;
+        // background-color: aqua;
         margin: auto;
         @include flexible( row , nowrap , space-between , flex-start );
-
-
     }
 
     &__datos{
         width: 40%;
-        background-color: coral;
+        // background-color: coral;
 
         @include flexible( row , nowrap , flex-start , flex-start );
 
@@ -30,7 +30,7 @@
         @include flexible( column , nowrap , flex-start , flex-start );
     
         margin: 0 0 0 10%;
-        background-color: deepskyblue;
+        // background-color: deepskyblue;
 
     }
     &__p{
@@ -51,16 +51,45 @@
 }
 
 .blanca{
-    background-color: var(--amarillo);
+    
+    position: relative;
+    margin: 4rem 0;
+    overflow: hidden;
+    &::after{
+        content: '';
+        display: block;
+        width: 50%;
+        height: 1rem;
+        background-color: var(--rosa);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        border-radius: 1rem;
+    }
+    &::before{
+        content: '';
+        display: block;
+        width: 50%;
+        height: 1rem;
+        background-color: var(--rosa);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        border-radius: 0 1rem 1rem 0; 
+    }
     &__move{
         width: 200%;
-        background-color: red;
+        // background-color: red;
         @include flexible( row , nowrap , flex-start , center );
-        padding: 6rem 0;
+        // padding: 6rem 0;
+
+        animation: move 6s linear infinite both;
     }
     &__hgroup{
-        width: 90%;
-        background-color: deeppink;
+        width: 25%;
+        // background-color: deeppink;
         padding: 2rem 0;
 
         
@@ -68,15 +97,22 @@
     }
     &__h2{
         font-size: 9em;
-        background-color: cornflowerblue;
+        // background-color: cornflowerblue;
         color: var(--rosa);
+        @include flexible( row , nowrap , center , center );
         
     }
     &__span{
+        display: block;
         width: 10px;
         height: 10px;
         background-color: var(--rosa);
         border-radius: 50%;
+        margin: 0 2rem;
+
+        &.no{
+            margin: 0 0 0 2rem;
+        }
     }
 }
 
@@ -99,20 +135,36 @@
         position: absolute;
         top: 0;
         opacity: 0;
+        border-radius: 2rem 2rem 0 0;
 
         &.static{
             position: static;
         }
 
-        &.activo{
-            opacity: 1;
-        }
+       animation: imageFade 8s ease infinite;
+
+       @keyframes imageFade{
+           0%{opacity: 0;}
+           6%{opacity: 1;}
+           12%{opacity: 1;}
+           18%{opacity: 0;}
+           100%{opacity: 0;}
+       }
+
+    &.noesalgohumano{ animation-delay: 0s;}
+    &.betterlife{ animation-delay: 1s;}
+    &.galaxy{ animation-delay: 2s;}
+    &.novelchampions{ animation-delay: 3s;}
+    &.kaseo{ animation-delay: 4s;}
+    &.almacorazon{ animation-delay: 5s;}
+    &.betterflakes{ animation-delay: 6s;}
+    &.silorepartescrece{ animation-delay: 7s;}
     }
     &__face{
-        width: 10rem;
+        width: 14rem;
         position: absolute;
-        right: 0;
-        top: 0;
+        right: -5rem;
+        top: -2rem;
         color: black;
         z-index: 2;
     }
@@ -120,6 +172,7 @@
     &__ul{
         background-color: deeppink;
         @include flexible( row , nowrap , flex-start , center );
+        margin-top: -3rem;
     }
     &__li{}
     &__dato{
@@ -136,7 +189,9 @@
         }
     }
 
-    &__container{}
+    &__container{
+        position: relative;
+    }
     &__bloque{
         padding: 2rem;
         &.works{
@@ -144,6 +199,13 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax( 20rem,  1fr ));
             gap: 2rem;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            width: 100%;
+            &.oculto{
+                display: none;
+            }
             
            
            
@@ -152,6 +214,12 @@
         &.about{
             background-color: var(--rosa);
             @include flexible( row , nowrap , space-between , flex-start );
+
+            display: none;
+            &.activo{
+                display: flex;
+            }
+
 
             
         }
