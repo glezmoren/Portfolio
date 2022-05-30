@@ -327,6 +327,18 @@ body {
             animation: move 14s linear infinite both;
   }
 }
+@media screen and (max-width: 998px) {
+  .blanca__move {
+    width: 600%;
+    -webkit-animation: move 16s linear infinite both;
+            animation: move 16s linear infinite both;
+  }
+}
+@media screen and (max-width: 827px) {
+  .blanca__move {
+    width: 500%;
+  }
+}
 .blanca__hgroup {
   width: 25%;
   padding: 2rem 0;
@@ -347,6 +359,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (max-width: 827px) {
+  .blanca__h2 {
+    font-size: 6em;
+  }
 }
 .blanca__span {
   display: block;

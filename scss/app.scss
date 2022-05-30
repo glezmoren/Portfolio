@@ -133,6 +133,17 @@ body{
             animation: move 14s linear infinite both;
              
         }
+        @media screen and (max-width: 998px) {
+
+            width: 600%;
+            animation: move 16s linear infinite both;
+             
+        }
+        @media screen and (max-width: 827px) {
+
+           width: 500%;
+            
+        }
     }
     &__hgroup{
         width: 25%;
@@ -147,6 +158,11 @@ body{
         // background-color: cornflowerblue;
         color: var(--rosa);
         @include flexible( row , nowrap , center , center );
+        @media screen and (max-width: 827px) {
+
+            font-size: 6em;
+            
+        }
         
     }
     &__span{
@@ -162,6 +178,7 @@ body{
         }
     }
 }
+
 
 .amarillo{
     width: 100%;
@@ -183,18 +200,31 @@ body{
         top: 0;
         opacity: 0;
         border-radius: 2rem 2rem 0 0;
+       
+        
 
         &.static{
             position: static;
+
         }
+
+        // @media screen and (max-width: 1600px) {
+
+        //     max-width: 70%;
+        //     left: calc(50% - 404.5px);
+            
+             
+        // }
 
        animation: imageFade 8s ease infinite;
 
         &.noesalgohumano{ 
             animation-delay: 0s;
+            
         }
         &.betterlife{ 
             animation-delay: 1s;
+            
         }
         &.galaxy{ 
             animation-delay: 2s;
