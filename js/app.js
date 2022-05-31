@@ -13,8 +13,13 @@
 // }
 
 
-$('.amarillo__dato about').click(function(){
-    $('.amarillo_bloque works').addclass('oculto')
-    $('.amarillo_bloque about').addclass('activo')
+$('.amarillo__dato.about').click(function(){
+    $('.amarillo__bloque.works').removeClass('activo')
+    $('.amarillo__bloque.about').addClass('activo')
 })
+$('.amarillo__dato.works').click(function(){
+    $('.amarillo__bloque.about').removeClass('activo')
+    $('.amarillo__bloque.works').addClass('activo')
+})
+
 

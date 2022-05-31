@@ -136,8 +136,8 @@ body{
         @include flexible( row , nowrap , flex-start , center );
         // padding: 6rem 0;
 
-        animation: move 6s linear infinite both;
-        @media screen and (max-width: 2479px) {
+        // animation: move 6s linear infinite both;
+        /* @media screen and (max-width: 2479px) {
 
             width: 212%;
              
@@ -178,7 +178,7 @@ body{
 
            width: 700%;
             
-        }
+        } */
     }
     &__hgroup{
         width: 25%;
@@ -193,7 +193,9 @@ body{
         // background-color: cornflowerblue;
         color: var(--rosa);
         @include flexible( row , nowrap , center , center );
-        @media screen and (max-width: 827px) {
+        font-size: clamp(1rem, 5.3vw, 8rem); 
+        background-color: aqua;
+        /* @media screen and (max-width: 827px) {
 
             font-size: 6em;
             
@@ -207,7 +209,7 @@ body{
 
             font-size: 4em;
             
-        }
+        } */
         
     }
     &__span{
@@ -216,10 +218,10 @@ body{
         height: 10px;
         background-color: var(--rosa);
         border-radius: 50%;
-        margin: 0 2rem;
+        margin: 0 1vw   ;
 
         &.no{
-            margin: 0 0 0 2rem;
+            margin: 0 0 0 1vw   ;
         }
     }
 }
@@ -347,6 +349,8 @@ body{
     &__bloque{
         padding: 2rem;
         border-radius: 0 2rem 0 0;
+        
+
         &.works{
             background-color: var(--morado);
             display: grid;
@@ -356,8 +360,10 @@ body{
             // top: 0;
             // left: 0;
             width: 100%;
-            &.oculto{
-                display: none;
+            display: none;
+
+            &.activo{
+                display: grid;
             }
 
             @media screen and (max-width: 1352px) {
@@ -373,7 +379,7 @@ body{
             padding: 4rem 10rem;
             @include flexible( row , nowrap , center , flex-start );
 
-            // display: none;
+            display: none;
             &.activo{
                 display: flex;
             }
