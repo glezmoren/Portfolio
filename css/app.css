@@ -329,56 +329,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* @media screen and (max-width: 2479px) {
-
-      width: 212%;
-
-  }
-  @media screen and (max-width: 1700px) {
-
-      animation: move 10s linear infinite both;
-
-  }
-  @media screen and (max-width: 1400px) {
-
-      width: 400%;
-
-  }
-  @media screen and (max-width: 1241px) {
-
-      width: 500%;
-      animation: move 14s linear infinite both;
-
-  }
-  @media screen and (max-width: 998px) {
-
-      width: 600%;
-      animation: move 16s linear infinite both;
-
-  }
-  @media screen and (max-width: 827px) {
-
-     width: 500%;
-
-  }
-  @media screen and (max-width: 693px) {
-
-     width: 600%;
-
-  }
-  @media screen and (max-width: 494px) {
-
-     width: 700%;
-
-  } */
+  -webkit-animation: move 6s linear infinite both;
+          animation: move 6s linear infinite both;
 }
 .blanca__hgroup {
   width: 25%;
   padding: 2rem 0;
 }
 .blanca__h2 {
-  font-size: 9em;
-  color: var(--rosa);
+  width: 100%;
+  /*  background-color: aqua; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -386,40 +346,26 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-size: clamp(1rem, 5.3vw, 8rem);
-  background-color: aqua;
-  /* @media screen and (max-width: 827px) {
-
-      font-size: 6em;
-
-  }
-  @media screen and (max-width: 693px) {
-
-      font-size: 5em;
-
-  }
-  @media screen and (max-width: 494px) {
-
-      font-size: 4em;
-
-  } */
+  color: var(--rosa);
 }
-.blanca__span {
-  display: block;
-  width: 10px;
-  height: 10px;
-  background-color: var(--rosa);
-  border-radius: 50%;
-  margin: 0 1vw;
+.blanca__div {
+  width: calc( 100% / 3);
+  /* background-color: crimson; */
+  margin: 0 1px;
+  text-align: center;
 }
-.blanca__span.no {
-  margin: 0 0 0 1vw;
+.blanca__punto {
+  width: 1.4vw;
+  height: 1.4vw;
+  /* background-color: black; */
+  margin: 0 0.5vw;
 }
 
 .amarillo {
@@ -504,8 +450,10 @@ body {
 .amarillo .amarillo__face:hover {
   opacity: 0;
 }
+.amarillo__junto {
+  position: relative;
+}
 .amarillo__ul {
-  background-color: deeppink;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,7 +467,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -2rem;
+  top: -5rem;
   position: absolute;
   z-index: 4;
 }
@@ -537,6 +485,7 @@ body {
 }
 .amarillo__container {
   position: relative;
+  top: -2.46rem;
 }
 .amarillo__bloque {
   padding: 2rem;
@@ -546,8 +495,8 @@ body {
   background-color: var(--morado);
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 4rem;
   width: 100%;
   display: none;
 }
@@ -628,7 +577,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   background-color: aqua;
-  width: 50%;
+  width: 100%;
+  max-width: 40rem;
   min-width: 40%;
   border-radius: 4rem;
 }
@@ -639,19 +589,30 @@ body {
 }
 .amarillo__bloque .works__section {
   letter-spacing: 1px;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.amarillo__bloque .works__section.activo {
+  opacity: 1;
 }
 .amarillo__bloque .works__img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
-.amarillo__bloque .works__h2 {
-  margin: 1rem 0 0 0;
+@media (hover: none) {
+  .amarillo__bloque .works__img {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
 }
 .amarillo__bloque .works__img:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
 }
-
+.amarillo__bloque .works__h2 {
+  margin: 1rem 0 0 0;
+}
 .footer {
   background-color: var(--amarillo);
 }
@@ -659,6 +620,7 @@ body {
   width: 100%;
   background-color: var(--azul);
   padding: 2rem 0;
+  margin: -2.46rem 0;
 }
 .footer__work {
   text-transform: uppercase;

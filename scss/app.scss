@@ -134,96 +134,36 @@ body{
         width: 200%;
         // background-color: red;
         @include flexible( row , nowrap , flex-start , center );
-        // padding: 6rem 0;
-
-        // animation: move 6s linear infinite both;
-        /* @media screen and (max-width: 2479px) {
-
-            width: 212%;
-             
-        }
-        @media screen and (max-width: 1700px) {
-
-            animation: move 10s linear infinite both;
-             
-        }
-        @media screen and (max-width: 1400px) {
-
-            width: 400%;
-             
-        }
-        @media screen and (max-width: 1241px) {
-
-            width: 500%;
-            animation: move 14s linear infinite both;
-             
-        }
-        @media screen and (max-width: 998px) {
-
-            width: 600%;
-            animation: move 16s linear infinite both;
-             
-        }
-        @media screen and (max-width: 827px) {
-
-           width: 500%;
-            
-        }
-        @media screen and (max-width: 693px) {
-
-           width: 600%;
-            
-        }
-        @media screen and (max-width: 494px) {
-
-           width: 700%;
-            
-        } */
+        animation: move 6s linear infinite both;
     }
     &__hgroup{
         width: 25%;
-        // background-color: deeppink;
         padding: 2rem 0;
-
-        
-        
     }
     &__h2{
-        font-size: 9em;
-        // background-color: cornflowerblue;
-        color: var(--rosa);
-        @include flexible( row , nowrap , center , center );
-        font-size: clamp(1rem, 5.3vw, 8rem); 
-        background-color: aqua;
-        /* @media screen and (max-width: 827px) {
-
-            font-size: 6em;
-            
-        }
-        @media screen and (max-width: 693px) {
-
-            font-size: 5em;
-            
-        }
-        @media screen and (max-width: 494px) {
-
-            font-size: 4em;
-            
-        } */
+        width: 100%;
+       /*  background-color: aqua; */
         
+        @include flexible( row , nowrap , flex-start , center );
+        font-size: clamp(1rem, 5.3vw, 8rem); 
+        color: var(--rosa);
     }
-    &__span{
-        display: block;
-        width: 10px;
-        height: 10px;
-        background-color: var(--rosa);
-        border-radius: 50%;
-        margin: 0 1vw   ;
-
-        &.no{
-            margin: 0 0 0 1vw   ;
-        }
+    &__div{
+        width: calc( 100% / 3);
+        /* background-color: crimson; */
+        
+        margin: 0 1px;
+        text-align: center;
     }
+     &__punto{
+        width: 1.4vw;
+        height: 1.4vw;
+        /* background-color: black; */
+        margin: 0 .5vw;
+        
+    
+    } 
+    
 }
 
 
@@ -320,10 +260,15 @@ body{
         opacity: 0;
     }
 
+    &__junto{
+        position: relative;
+
+    }
+
     &__ul{
-        background-color: deeppink;
+        // background-color: deeppink;
         @include flexible( row , nowrap , flex-start , center );
-        margin-top: -2rem;
+        top: -5rem;
         position:absolute;
         z-index: 4;
     }
@@ -345,6 +290,7 @@ body{
 
     &__container{
         position: relative;
+        top: -2.46rem;
     }
     &__bloque{
         padding: 2rem;
@@ -354,8 +300,8 @@ body{
         &.works{
             background-color: var(--morado);
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax( 20rem,  1fr ));
-            gap: 6rem;
+            grid-template-columns: repeat(auto-fit, minmax( 22rem,  1fr ));
+            gap: 4rem;
             // position: absolute;
             // top: 0;
             // left: 0;
@@ -430,7 +376,8 @@ body{
             &__img{
                 display: flex;
                 background-color: aqua;
-                width: 50%;
+                width: 100%;
+                max-width: 40rem;
                 min-width: 40%;
                 border-radius: 4rem;
 
@@ -444,10 +391,11 @@ body{
         .works{
             &__section{
                 letter-spacing: 1px;
-                // opacity: 0;
-                // &.activo{
-                //     opacity: 1;
-                // }
+                opacity: 0;
+                transition: all .5s ease;
+                &.activo{
+                    opacity: 1;
+                }
                 
             }
             &__a{
@@ -459,9 +407,13 @@ body{
                 // background-color: black;
                 filter: grayscale(100%);
 
-               
+                @media (hover: none) {
+                    filter: grayscale(0%);
+                }
                 
-               
+               &:hover{
+                filter: grayscale(0%);
+                }
             }
             &__h2{
                 margin: 1rem 0 0 0;
@@ -469,9 +421,7 @@ body{
             &__p{}
         }
 
-        .works__img:hover{
-            filter: grayscale(0%);
-        }
+       
 
         }
 
@@ -486,6 +436,7 @@ body{
        width: 100%;
         background-color: var(--azul);
         padding: 2rem 0;
+        margin: -2.46rem 0;
 
     }
     &__ready{}
