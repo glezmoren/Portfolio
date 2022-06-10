@@ -191,7 +191,8 @@ body {
 }
 @media screen and (max-width: 500px) {
   .header {
-    padding: 0.8rem 0;
+    font-size: 1em;
+    padding: 1rem 0;
   }
 }
 .header__wrapper {
@@ -280,6 +281,11 @@ body {
   margin: 2rem 0 4rem;
   overflow: hidden;
 }
+@media screen and (max-width: 500px) {
+  .blanca {
+    margin: 1rem 0 3rem;
+  }
+}
 .blanca::after {
   content: "";
   display: block;
@@ -292,9 +298,11 @@ body {
   z-index: 1;
   border-radius: 1rem 0 0 1rem;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 627px) {
   .blanca::after {
-    height: 0.5rem;
+    width: 100%;
+    height: 0.3rem;
+    border-radius: 0;
   }
 }
 .blanca::before {
@@ -309,9 +317,11 @@ body {
   z-index: 1;
   border-radius: 0 1rem 1rem 0;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 627px) {
   .blanca::before {
-    height: 0.5rem;
+    width: 100%;
+    height: 0.3rem;
+    border-radius: 0;
   }
 }
 .blanca__move {
@@ -335,6 +345,11 @@ body {
 .blanca__hgroup {
   width: 25%;
   padding: 2rem 0;
+}
+@media screen and (max-width: 627px) {
+  .blanca__hgroup {
+    padding: 1.2rem 0;
+  }
 }
 .blanca__h2 {
   width: 100%;
@@ -385,6 +400,11 @@ body {
   border-radius: 2rem 2rem 0 0;
   -webkit-animation: imageFade 8s ease infinite;
           animation: imageFade 8s ease infinite;
+}
+@media screen and (max-width: 500px) {
+  .amarillo__img {
+    border-radius: 1rem 1rem 0 0;
+  }
 }
 .amarillo__img.static {
   position: static;
@@ -445,6 +465,12 @@ body {
   .amarillo__face {
     right: -1rem;
     width: 9rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .amarillo__face {
+    width: 6rem;
+    right: 0;
   }
 }
 .amarillo .amarillo__face:hover {
@@ -520,6 +546,11 @@ body {
   gap: 4rem;
   width: 100%;
   display: none;
+}
+@media screen and (max-width: 500px) {
+  .amarillo__bloque.works {
+    gap: 3rem;
+  }
 }
 .amarillo__bloque.works.activo {
   display: -ms-grid;
@@ -617,6 +648,9 @@ body {
 .amarillo__bloque .works__section.activo {
   opacity: 1;
 }
+.amarillo__bloque .works__a {
+  letter-spacing: 1.4px;
+}
 .amarillo__bloque .works__img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -641,7 +675,12 @@ body {
   width: 100%;
   background-color: var(--azul);
   padding: 2rem 0;
-  margin: -2.46rem 0;
+  margin: -2.4rem 0;
+}
+@media screen and (max-width: 500px) {
+  .footer__wrapper {
+    margin: -0.2rem 0;
+  }
 }
 .footer__work {
   text-transform: uppercase;

@@ -29,8 +29,8 @@ body{
          
     }
     @media screen and (max-width: 500px) {
-
-       padding: 0.8rem 0;
+        font-size: 1em;
+        padding: 1rem 0;
          
     }
     
@@ -94,6 +94,12 @@ body{
     position: relative;
     margin: 2rem 0 4rem;
     overflow: hidden;
+    @media screen and (max-width: 500px) {
+
+        margin: 1rem 0 3rem;
+          
+    }
+    
     &::after{
         content: '';
         display: block;
@@ -106,9 +112,10 @@ body{
         z-index: 1;
         border-radius: 1rem 0 0 1rem;
 
-        @media screen and (max-width: 500px) {
-
-            height: 0.5rem;
+        @media screen and (max-width: 627px) {
+            width: 100%;
+            height: 0.3rem;
+            border-radius: 0;
               
         }
     }
@@ -124,9 +131,10 @@ body{
         z-index: 1;
         border-radius: 0 1rem 1rem 0; 
 
-        @media screen and (max-width: 500px) {
-
-            height: 0.5rem;
+        @media screen and (max-width: 627px) {
+            width: 100%;
+            height: 0.3rem;
+            border-radius: 0;
               
         }  
     }
@@ -139,6 +147,11 @@ body{
     &__hgroup{
         width: 25%;
         padding: 2rem 0;
+
+        @media screen and (max-width: 627px) {
+           padding: 1.2rem 0;
+              
+        }
     }
     &__h2{
         width: 100%;
@@ -187,6 +200,10 @@ body{
         top: 0;
         opacity: 0;
         border-radius: 2rem 2rem 0 0;
+        
+        @media screen and (max-width: 500px) {
+            border-radius: 1rem 1rem 0 0;
+        }
        
         &.static{
             position: static;
@@ -254,6 +271,11 @@ body{
 
             right: -1rem;
             width: 9rem;
+        }
+        @media screen and (max-width: 500px) {
+            width: 6rem;
+            right: 0;
+
         }
     }
     .amarillo__face:hover{
@@ -328,6 +350,10 @@ body{
             // left: 0;
             width: 100%;
             display: none;
+            @media screen and (max-width: 500px) {
+                gap: 3rem;
+     
+             }
 
             &.activo{
                 display: grid;
@@ -420,8 +446,9 @@ body{
                 
             }
             &__a{
-                
+                letter-spacing: 1.4px;
             }
+        
             &__img{
                 // width: 20rem;
                 // height: 20rem;
@@ -457,7 +484,10 @@ body{
        width: 100%;
         background-color: var(--azul);
         padding: 2rem 0;
-        margin: -2.46rem 0;
+        margin: -2.4rem 0;
+        @media screen and (max-width: 500px) {
+            margin: -0.2rem 0;
+         }
 
     }
     &__ready{}
