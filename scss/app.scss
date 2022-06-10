@@ -271,6 +271,11 @@ body{
         top: -5rem;
         position:absolute;
         z-index: 4;
+
+        @media screen and (max-width: 500px) {
+            top: -2rem;
+
+        }
     }
     &__li{}
     &__dato{
@@ -278,6 +283,12 @@ body{
         border-radius: 1rem 1rem 0 0;
         background-color: azure;
         cursor: pointer;
+        @media screen and (max-width: 500px) {
+            font-size: 0.8em;
+            padding: 0.6rem 3rem 0.2rem 1rem;
+
+        }
+        
 
         &.works{
             background-color: var(--morado);
@@ -291,10 +302,20 @@ body{
     &__container{
         position: relative;
         top: -2.46rem;
+
+        @media screen and (max-width: 500px) {
+            top: -0.2rem;
+
+        }
     }
     &__bloque{
         padding: 2rem;
         border-radius: 0 2rem 0 0;
+
+        @media screen and (max-width: 500px) {
+           border-radius: 0;
+
+        }
         
 
         &.works{

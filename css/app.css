@@ -471,11 +471,22 @@ body {
   position: absolute;
   z-index: 4;
 }
+@media screen and (max-width: 500px) {
+  .amarillo__ul {
+    top: -2rem;
+  }
+}
 .amarillo__dato {
   padding: 0.8rem 3rem 0.5rem 1rem;
   border-radius: 1rem 1rem 0 0;
   background-color: azure;
   cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .amarillo__dato {
+    font-size: 0.8em;
+    padding: 0.6rem 3rem 0.2rem 1rem;
+  }
 }
 .amarillo__dato.works {
   background-color: var(--morado);
@@ -487,9 +498,19 @@ body {
   position: relative;
   top: -2.46rem;
 }
+@media screen and (max-width: 500px) {
+  .amarillo__container {
+    top: -0.2rem;
+  }
+}
 .amarillo__bloque {
   padding: 2rem;
   border-radius: 0 2rem 0 0;
+}
+@media screen and (max-width: 500px) {
+  .amarillo__bloque {
+    border-radius: 0;
+  }
 }
 .amarillo__bloque.works {
   background-color: var(--morado);
