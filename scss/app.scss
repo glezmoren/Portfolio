@@ -104,7 +104,7 @@ body{
         content: '';
         display: block;
         width: 50%;
-        height: 1rem;
+        height: 0.7rem;
         background-color: var(--rosa);
         position: absolute;
         bottom: 0;
@@ -123,7 +123,7 @@ body{
         content: '';
         display: block;
         width: 50%;
-        height: 1rem;
+        height: 0.7rem;
         background-color: var(--rosa);
         position: absolute;
         top: 0;
@@ -147,6 +147,8 @@ body{
     &__hgroup{
         width: 25%;
         padding: 2rem 0;
+        font-family: 'nighty_demoregular';
+    
 
         @media screen and (max-width: 627px) {
            padding: 1.2rem 0;
@@ -158,7 +160,7 @@ body{
        /*  background-color: aqua; */
         
         @include flexible( row , nowrap , flex-start , center );
-        font-size: clamp(1rem, 5.3vw, 8rem); 
+        font-size: clamp(1rem, 5.3vw, 10rem); 
         color: var(--rosa);
     }
     &__div{

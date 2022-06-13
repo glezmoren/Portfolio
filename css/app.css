@@ -290,7 +290,7 @@ body {
   content: "";
   display: block;
   width: 50%;
-  height: 1rem;
+  height: 0.7rem;
   background-color: var(--rosa);
   position: absolute;
   bottom: 0;
@@ -309,7 +309,7 @@ body {
   content: "";
   display: block;
   width: 50%;
-  height: 1rem;
+  height: 0.7rem;
   background-color: var(--rosa);
   position: absolute;
   top: 0;
@@ -345,6 +345,7 @@ body {
 .blanca__hgroup {
   width: 25%;
   padding: 2rem 0;
+  font-family: "nighty_demoregular";
 }
 @media screen and (max-width: 627px) {
   .blanca__hgroup {
@@ -367,7 +368,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: clamp(1rem, 5.3vw, 8rem);
+  font-size: clamp(1rem, 5.3vw, 10rem);
   color: var(--rosa);
 }
 .blanca__div {
