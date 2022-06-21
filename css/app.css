@@ -682,7 +682,7 @@ body {
   width: 100%;
   background-color: var(--azul);
   padding: 2rem 0;
-  margin: -2.4rem 0;
+  margin: -2.46rem 0;
 }
 @media screen and (max-width: 500px) {
   .footer__wrapper {
